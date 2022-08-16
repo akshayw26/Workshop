@@ -6,6 +6,7 @@ public class TicTacGame {
     public static void main(String[] args) {
 
         emptyBoard();
+        choice();
     }
 
     static char[] board = new char[10];
@@ -25,4 +26,5 @@ public class TicTacGame {
         playerLetter = scan.next().charAt(0);
         computerLetter = (playerLetter == 'X') ? 'O' : 'X';
     }
+
 }
