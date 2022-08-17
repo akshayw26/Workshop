@@ -21,8 +21,6 @@ public class TicTacGame {
     static char playerLetter;
     static char computerLetter;
 
-    static int index;
-
     private static void emptyBoard() {
         for (int i = 1; i < board.length; i++) {
             board[i] = ' ';
