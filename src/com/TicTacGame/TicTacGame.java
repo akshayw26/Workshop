@@ -5,12 +5,14 @@ import java.util.*;
 public class TicTacGame {
 
     public static void main(String[] args) {
-
+        System.out.println("Welcome To The Game Of Tic_Tac_Toe");
+        System.out.println("----------------------------------");
+        toss();
         emptyBoard();
         choice();
         printBoard();
         makeMove();
-
+        checkForFreeSpace();
     }
 
     static char[] board = new char[10];
@@ -18,6 +20,8 @@ public class TicTacGame {
     static Scanner sc = new Scanner(System.in);
     static char playerLetter;
     static char computerLetter;
+
+    static int index;
 
     private static void emptyBoard() {
         for (int i = 1; i < board.length; i++) {
@@ -56,7 +60,7 @@ public class TicTacGame {
             board[location] = playerLetter;
             printBoard();
             makeMove();
-
+            checkForFreeSpace();
 
         }
     }
@@ -77,5 +81,15 @@ public class TicTacGame {
         }
     }
 
-
+    static void toss() {
+        System.out.println("Throw the Toss");
+        System.out.println("--------------");
+        int heads = 0;
+        int toss = (int) Math.floor(Math.random() * 10) / 2;
+        if (toss == heads) {
+            System.out.println("User turn first");
+        } else {
+            System.out.println("Computer turn first");
+        }
+    }
 }
