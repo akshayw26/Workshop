@@ -1,8 +1,8 @@
-package com.TicTacGame;
+package com.Tic_Tac_Toe_Game;
 
 import java.util.*;
 
-public class TicTacGame {
+public class Tic_Tac_Toe_Game {
 
     public static void main(String[] args) {
         System.out.println("Welcome To The Game Of Tic_Tac_Toe");
