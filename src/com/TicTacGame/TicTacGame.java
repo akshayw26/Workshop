@@ -6,8 +6,6 @@ public class TicTacGame {
 
     public static void main(String[] args) {
 
-
-
         emptyBoard();
         choice();
         printBoard();
@@ -59,6 +57,23 @@ public class TicTacGame {
             printBoard();
             makeMove();
 
+
+        }
+    }
+
+    static void checkForFreeSpace() {
+        boolean isSpaceAvailable = false;
+        int numOfFreeSpace = 0;
+        for (int i = 1; i < board.length; i++) {
+            if (board[i] == ' ') {
+                isSpaceAvailable = true;
+                numOfFreeSpace++;
+            }
+        }
+        if (isSpaceAvailable == false) {
+            System.out.println("Board is full. You can't make another move");
+        } else {
+            System.out.println(numOfFreeSpace + " spaces available");
         }
     }
 
